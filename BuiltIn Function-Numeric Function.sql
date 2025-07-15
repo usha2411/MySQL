@@ -1,0 +1,20 @@
+#absolute value
+SELECT ABS(-40);
+SELECT ABS(30);
+
+#squareroot
+SELECT SQRT(25);
+
+#modulous-remainder
+SELECT MOD(10,3);
+
+#power
+SELECT POWER(2,3);
+
+#truncate
+SELECT TRUNCATE(123.545421,2);
+SELECT TRUNCATE(241225365.23,-4);
+
+#greatest,least
+SELECT GREATEST(100,25,365,125);
+SELECT LEAST(1,25,98,36,24);
