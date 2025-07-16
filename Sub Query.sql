@@ -1,0 +1,23 @@
+USE mydb;
+SELECT * FROM EMPLOYEES;
+ #display employeesnwhose salary is less than siya salary
+ 
+#query-1: find siya salary
+SELECT SALARY FROM EMPLOYEES WHERE NAME ='SIYA';
+
+#query2 : find salary less than siya
+SELECT SALARY FROM EMPLOYEES WHERE SALARY<19000;
+
+#method2:
+SELECT SALARY FROM EMPLOYEES WHERE SALARY<(SELECT SALARY FROM EMPLOYEES WHERE NAME ='SIYA');
+
+#2nd max salary from employees
+SELECT MAX(SALARY) FROM EMPLOYEES WHERE SALARY<(SELECT MAX(SALARY) FROM EMPLOYEES);
+
+#3rd max salary
+SELECT MAX(SALARY) FROM EMPLOYEES WHERE SALARY<(SELECT MAX(SALARY) FROM EMPLOYEES WHERE SALARY <(SELECT MAX(SALARY) FROM EMPLOYEES));
+
+#display employees who all earing highest salary
+SELECT * FROM EMPLOYEES WHERE SALARY=(SELECT MAX(SALARY) FROM EMPLOYEES);
+
+#salary of employees whose salary is greater than employee id 102
