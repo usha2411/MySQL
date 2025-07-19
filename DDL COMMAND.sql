@@ -1,4 +1,4 @@
-#DDL-create,alter,modify,drop,truncate
+#DDL-create,alter,drop,truncate,rename
 USE mydb;
 #1.create
 CREATE TABLE STUDENT (ID INT(4), NAME VARCHAR(25));
@@ -27,7 +27,7 @@ DESCRIBE STUDENT;
 #iv.rename
 ALTER TABLE `STUDENT` RENAME COLUMN NAME TO FIRSTNAME;
 
-#4.truncate
+#3.truncate
 INSERT INTO `STUDENTS` VALUES(101,'RUSHI',80,'A');
 INSERT INTO `STUDENTS` VALUES(102,'USHA',50,'A+');
 INSERT INTO `STUDENTS` VALUES(103,'RAVI',30,'B');
@@ -35,5 +35,10 @@ INSERT INTO `STUDENTS` VALUES(103,'RAVI',30,'B');
 TRUNCATE TABLE `STUDENTS`;
 SELECT * FROM STUDENTS;
 
-#5.drop
+#4.drop
 DROP TABLE `STUDENTS`;
+
+#5.rename
+USE testing;
+RENAME TABLE course1 TO Course;
+RENAME TABLE Course TO Course1;
